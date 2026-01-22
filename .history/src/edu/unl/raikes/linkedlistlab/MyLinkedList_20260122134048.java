@@ -224,15 +224,8 @@ public class MyLinkedList<E> implements List<E> {
 
     @Override
     public boolean remove(Object obj) {
-        int index = this.indexOf(obj);
-        if (index == -1) {
-            return false;
-        } 
-        this.remove(index);
-        return true;
-
-
-        
+        // TODO: fill this in
+        return false;
     }
 
     @Override
@@ -256,7 +249,6 @@ public class MyLinkedList<E> implements List<E> {
             nodeToRemove = node.next;
             node.next = nodeToRemove.next;
         }
-        this.size--;
 
         return nodeToRemove.cargo;
     }

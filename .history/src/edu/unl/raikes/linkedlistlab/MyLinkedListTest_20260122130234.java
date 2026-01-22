@@ -59,34 +59,34 @@ public class MyLinkedListTest {
 		assertThat(mll.get(18), is(new Integer(19)));
 	}
 
-    /**
-     * Test method for {@link edu.unl.raikes.linkedlistlab.MyArrayList#add(int, java.lang.Object)}.
-     */
-    @Test
-    public void testAddIntT() {
-        mll.add(1, 5);
-        //System.out.println(Arrays.toString(mal.toArray()));
-        assertThat(mll.get(1), is(new Integer(5)));
-        assertThat(mll.size(), is(4));
-        
-        try {
-            mll.set(-1, 0);
-            fail();
-        } catch (IndexOutOfBoundsException e) {} // good
+	/**
+	 * Test method for {@link edu.unl.raikes.linkedlistlab.MyArrayList#add(int, java.lang.Object)}.
+	 */
+	@Test
+	public void testAddIntT() {
+		mll.add(1, 5);
+		//System.out.println(Arrays.toString(mal.toArray()));
+		assertThat(mll.get(1), is(new Integer(5)));
+		assertThat(mll.size(), is(4));
+		
+		try {
+		    mll.set(-1, 0);
+		    fail();
+		} catch (IndexOutOfBoundsException e) {} // good
 
-        try {
-            mll.set(4, 0);
-            fail();
-        } catch (IndexOutOfBoundsException e) {} // good
-        
-        mll.add(0, 6);
-        //System.out.println(Arrays.toString(mal.toArray()));
-        assertThat(mll.get(0), is(6));
+		try {
+		    mll.set(4, 0);
+		    fail();
+		} catch (IndexOutOfBoundsException e) {} // good
+		
+		mll.add(0, 6);
+		//System.out.println(Arrays.toString(mal.toArray()));
+		assertThat(mll.get(0), is(6));
 
-        mll.add(5, 7);
-        //System.out.println(Arrays.toString(mal.toArray()));
-        assertThat(mll.get(5), is(new Integer(7)));
-    }
+		mll.add(5, 7);
+		//System.out.println(Arrays.toString(mal.toArray()));
+		assertThat(mll.get(5), is(new Integer(7)));
+	}
 
 	/**
 	 * Test method for {@link edu.unl.raikes.linkedlistlab.MyArrayList#addAll(java.util.Collection)}.
